@@ -15,7 +15,7 @@ namespace Module4HW3.Data.EntityConfigurations
             builder.Property(e => e.FirstName).IsRequired().HasMaxLength(50);
             builder.Property(e => e.LastName).IsRequired().HasMaxLength(50);
             builder.Property(e => e.HiredDate).IsRequired().HasMaxLength(7);
-            builder.Property(e => e.DateOfBirth).IsRequired(false);
+            builder.Property(e => e.DateOfBirth).IsRequired(false).HasColumnType("date");
             builder.Property(e => e.OfficeId).IsRequired();
             builder.Property(e => e.TitleId).IsRequired();
 

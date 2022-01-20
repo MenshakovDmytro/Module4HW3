@@ -12,7 +12,7 @@ namespace Module4HW3.Data.EntityConfigurations
 
             builder.HasKey(e => e.EmployeeProjectId);
 
-            builder.Property(e => e.Rate).IsRequired();
+            builder.Property(e => e.Rate).IsRequired().HasColumnType("money");
             builder.Property(e => e.StartedDate).IsRequired().HasMaxLength(7);
             builder.Property(e => e.EmployeeId).IsRequired();
             builder.Property(e => e.ProjectId).IsRequired();
