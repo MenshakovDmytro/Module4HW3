@@ -9,8 +9,8 @@ namespace Module4HW3.Data.Entities
         public OfficeEntity OfficeEntity { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public DateTime HiredDate { get; set; }
-        public DateTime? DateOfBirth { get; set; }
+        public DateTimeOffset HiredDate { get; set; }
+        public DateTimeOffset? DateOfBirth { get; set; }
         public int OfficeId { get; set; }
         public int TitleId { get; set; }
         public TitleEntity TitleEntity { get; set; }
