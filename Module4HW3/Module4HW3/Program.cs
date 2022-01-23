@@ -1,5 +1,4 @@
 ﻿using System;
-using Module4HW3.Helper;
 
 namespace Module4HW3
 {
@@ -7,8 +6,12 @@ namespace Module4HW3
     {
         public static void Main(string[] args)
         {
-            var starter = new Starter();
-            starter.Run();
+            var cf = new ContextFactory();
+            using (var context = cf.CreateDbContext(null))
+            {
+            }
+
+            Console.ReadLine();
         }
     }
 }
