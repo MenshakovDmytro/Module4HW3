@@ -1,17 +1,16 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace Module4HW3
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
-            var cf = new ContextFactory();
-            using (var context = cf.CreateDbContext(null))
+            await using (var context = new ContextFactory().CreateDbContext(args))
             {
+                await new LazyLoadingWork(context).Run();
             }
-
-            Console.ReadLine();
         }
     }
 }
