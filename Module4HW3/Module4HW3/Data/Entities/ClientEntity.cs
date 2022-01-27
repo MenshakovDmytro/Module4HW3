@@ -7,7 +7,7 @@ namespace Module4HW3.Data.Entities
     {
         public int ClientId { get; set; }
         public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string SecondName { get; set; }
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
         public DateTimeOffset? DateOfBirth { get; set; }

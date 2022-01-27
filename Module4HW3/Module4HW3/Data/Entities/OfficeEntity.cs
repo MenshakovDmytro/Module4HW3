@@ -7,6 +7,6 @@ namespace Module4HW3.Data.Entities
         public int OfficeId { get; set; }
         public string Title { get; set; }
         public string Location { get; set; }
-        public ICollection<EmployeeEntity> EmployeeEntities { get; set; }
+        public ICollection<EmployeeEntity> EmployeeEntities { get; set; } = new List<EmployeeEntity>();
     }
 }
