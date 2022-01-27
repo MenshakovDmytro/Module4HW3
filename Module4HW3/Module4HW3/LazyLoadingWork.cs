@@ -85,7 +85,7 @@ namespace Module4HW3
         {
             await ExecuteTransaction(async () =>
             {
-                var employee = await _context.EmployeeEntities.OrderBy(e => e.EmployeeId).FirstAsync();
+                var employee = await _context.EmployeeEntities.OrderBy(e => e.EmployeeId).FirstOrDefaultAsync();
                 _context.EmployeeEntities.Remove(employee);
                 await _context.SaveChangesAsync();
             });
